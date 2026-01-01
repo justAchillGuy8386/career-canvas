@@ -13,7 +13,7 @@ const api = axios.create({
     timeout: 10000,
 });
 
-// (Tùy chọn) Interceptor: Chỗ này để xử lý Token sau này nếu cần
+// (Tùy chọn) Interceptor: lưu token để ứng dụng chạy nhanh hơn
 api.interceptors.request.use(
     (config) => {
         // console.log('Đang gọi API:', config.url);
@@ -24,7 +24,7 @@ api.interceptors.request.use(
     }
 )
 
-//Helpful function dùng để lấy dữ liệu nhanh gọn
+//Helpful function dùng để lấy dữ liệu nhanh gọn, các phương thức crud cơ bản
 export const restTransport = () => {
     return {
         get: async <T>(url: string , params?: any, config?: AxiosRequestConfig) => {
