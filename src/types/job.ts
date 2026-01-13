@@ -5,7 +5,7 @@ export interface Job {
     status: 'Applied' | 'Interviewed' | 'Offered' | 'Rejected'; // enum cứng ko chỉnh sửa
     salary: string;
     description: string;
-    appliedDate?: Date; // mock api tự thêm
+    appliedDate?: string | Date; // mock api tự thêm (ISO string from API or Date)
 }
 
 // định nghĩa kiểu query khi find job
