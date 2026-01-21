@@ -6,6 +6,7 @@ export interface Job {
     salary: string;
     description: string;
     appliedDate?: string | Date; // mock api tự thêm (ISO string from API or Date)
+    createdAt: string; // mock api tự thêm (ISO string from API)
 }
 
 // định nghĩa kiểu query khi find job
