@@ -1,7 +1,7 @@
 import axios, { Axios, AxiosRequestConfig, AxiosResponse} from "axios";
 
 // lấy url từ mock api
-const BASE_URL = "https://692edb8591e00bafccd5a98a.mockapi.io/jobs"; 
+const BASE_URL = "https://692edb8591e00bafccd5a98a.mockapi.io"; 
 
 // instance axios để tái sử dụng cấu hình
 const api = axios.create({
