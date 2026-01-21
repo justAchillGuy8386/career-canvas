@@ -17,3 +17,9 @@ export const createJob = async (data: Omit<Job, 'id' | 'createdAt'>) => {
     const res = await post<Job>(RESOURCE, data);
     return res;
 }
+
+//action xóa job
+export const deleteJob = async (id: string) => { // mock api yêu cầu id dạng: /jobs/:id, nối RESOURCE(/jobs) + / + id
+    const res = await restTransport()._delete<Job>(`${RESOURCE}/${id}`);
+    return res;
+}
