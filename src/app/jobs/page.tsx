@@ -92,7 +92,7 @@ export default function JobsPage() {
                           <div
                             ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}
                             className={`bg-white p-4 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-all 
-                              ${snapshot.isDragging ? "rotate-3 shadow-xl ring-2 ring-blue-400 opacity-90 scale-105" : ""}`}
+                              ${snapshot.isDragging ? "shadow-xl ring-2 ring-blue-400 opacity-90" : ""}`}
                             style={provided.draggableProps.style}
                           >
                             {/* --- Nội dung Card --- */}
@@ -111,7 +111,7 @@ export default function JobsPage() {
                             <div className="mt-3 pt-3 border-t border-gray-100">
                               <button 
                                 onClick={() => handleGenerateAI(job.company, job.position, job.id)}
-                                disabled={generatingId === job.id}
+                                disabled={generatingId !== null}
                                 className="w-full py-2 rounded-lg text-sm font-medium transition-all flex justify-center items-center gap-2
                                   bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 hover:from-purple-100 hover:to-pink-100 border border-purple-200 disabled:opacity-50"
                               >

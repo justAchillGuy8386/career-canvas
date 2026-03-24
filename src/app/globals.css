@@ -1,1 +1,3 @@
-/* Global styles (moved from src/application) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
