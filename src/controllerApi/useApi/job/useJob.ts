@@ -1,7 +1,7 @@
 "use client";
 
 import useSWR, { useSWRConfig } from "swr";
-import { getJobs, createJob, deleteJob } from "@/application/api/job";
+import { getJobs, createJob, deleteJob, updateJob } from "@/application/api/job";
 import { Job } from "@/types/job";
 import { use, useState } from "react";
 import { set } from "react-hook-form";
@@ -70,4 +70,21 @@ export function UseDeleteJob() {
         triggerDelete,
         isDeleting
     };
+}
+
+export function UseUpdateJob() {
+    const { mutate } = useSWRConfig(); //lấy hàm mutate từ swr config để cập nhật cache
+    const triggerUpdate = async (id: string, data: any) => {
+        try{
+            await updateJob(id, data); //gọi api update job
+            mutate(JOB_CACHE_KEY); // thành công => gọi swr tải lại danh sách mới
+            return { success: true };
+        } catch (error) {
+            console.error("Lỗi khi cập nhật", error);
+            return { success: false, error };
+        }
+    };  
+    return {
+        triggerUpdate
+    }
 }
