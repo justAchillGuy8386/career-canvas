@@ -23,3 +23,9 @@ export const deleteJob = async (id: string) => { // mock api yêu cầu id dạn
     const res = await restTransport()._delete<Job>(`${RESOURCE}/${id}`);
     return res;
 }
+
+// action update job
+export const updateJob = async (id: string, data: Partial<Job>) => {
+    const res = await restTransport().put<Job>(`${RESOURCE}/${id}`, data);
+    return res;
+}

@@ -16,7 +16,7 @@
 
 ## 📖 Giới thiệu
 
-**CareerCanvas** không chỉ là một danh sách việc làm đơn giản. Đây là một hệ thống **ATS (Applicant Tracking System) cá nhân** được thiết kế để giúp bạn:
+**CareerCanvas** không chỉ là một danh sách việc làm đơn giản. Dự án này tập trung trình diễn kiến trúc Frontend Doanh nghiệp (Clean Architecture 3 lớp). Để phục vụ việc demo luồng dữ liệu CRUD trực quan, tầng Backend được mô phỏng nhanh thông qua MockAPI. Đây là một hệ thống **ATS (Applicant Tracking System) cá nhân** được thiết kế để giúp bạn:
 
 - ✅ Quản lý toàn bộ quá trình ứng tuyển từ khi tìm việc đến khi nhận offer
 - ✅ Tổ chức công việc theo dạng Kanban Board với tính năng kéo thả
