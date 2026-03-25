@@ -58,10 +58,10 @@ export default function JobsPage() {
     await triggerUpdate(draggableId, { status: newStatus });
   };
 
-  if (isLoading) return <div className="min-h-screen flex items-center justify-center text-lg text-gray-500">Đang tải...</div>;
+  if (isLoading) return <div className="flex items-center justify-center text-lg text-gray-500 min-h-[calc(100vh-4rem)]">Đang tải...</div>;
 
   return (
-    <div className="min-h-screen bg-white p-6 md:p-10">
+    <div className="bg-white p-6 md:p-10">
       <h1 className="text-3xl font-bold mb-8 text-gray-800 flex items-center gap-3">
         <Briefcase className="text-blue-600" size={32} /> Career Canvas
       </h1>
